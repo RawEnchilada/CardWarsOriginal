@@ -8,32 +8,7 @@ public class DetectCheater : MonoBehaviour
 	public static void Detect(string json)
 	{
 		PlayerInfoScript instance = PlayerInfoScript.GetInstance();
-		bool cheater = false;
-		if (instance.Gems >= 0 && instance.GemsAccumulated < instance.Gems)
-		{
-			cheater = true;
-		}
-		if (instance.Coins >= 0 && instance.CoinsAccumulated < instance.Coins)
-		{
-			cheater = true;
-		}
-		if (instance.Gems >= 1000000)
-		{
-			cheater = true;
-		}
-		if (instance.Coins >= 1000000)
-		{
-			cheater = true;
-		}
-		if (instance.MaxInventory > CardBoxManager.Instance.MaxBoxCapacity || (instance.MaxInventory > ParametersManager.Instance.New_Player_Max_Inventory && instance.GemsAccumulated - instance.Gems == 0))
-		{
-			cheater = true;
-		}
-		if (instance.Checksum != " " && !VerifyChecksum(MD5Input()))
-		{
-			cheater = true;
-		}
-		instance.Cheater = cheater;
+		instance.Cheater = false;
 	}
 
 	public static string CreateChecksum(string aPayload)

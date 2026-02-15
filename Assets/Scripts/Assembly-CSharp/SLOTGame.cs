@@ -90,16 +90,11 @@ public class SLOTGame : BusyIconController
 
 	private void SetupScreen()
 	{
-		string text = SystemInfo.deviceModel.ToLower();
-		int num = text.IndexOf("amazon");
-		if (num >= 0)
-		{
-			Screen.autorotateToLandscapeLeft = true;
-			Screen.autorotateToLandscapeRight = false;
-			Screen.autorotateToPortrait = false;
-			Screen.autorotateToPortraitUpsideDown = false;
-			Screen.orientation = ScreenOrientation.LandscapeLeft;
-		}
+        Screen.autorotateToLandscapeLeft = true;
+        Screen.autorotateToLandscapeRight = true;
+        Screen.autorotateToPortrait = false;
+        Screen.autorotateToPortraitUpsideDown = false;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
 	}
 
 	private void Awake()

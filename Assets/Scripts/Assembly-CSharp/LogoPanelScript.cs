@@ -115,45 +115,8 @@ public class LogoPanelScript : MonoBehaviour
 	{
 		if (!isReturn)
 		{
-			Timer += Time.deltaTime;
-			if (Timer < 2f)
-			{
-				Alpha += Time.deltaTime;
-				CNLogo.color = new Color(1f, 1f, 1f, Mathf.Clamp(Alpha, 0f, 1f));
-			}
-			else if (Timer < 4f)
-			{
-				Alpha -= Time.deltaTime;
-				CNLogo.color = new Color(1f, 1f, 1f, Mathf.Clamp(Alpha, 0f, 1f));
-			}
-			else if (Timer < 6f)
-			{
-				backGroundTween.Play(true);
-				CNLogo.color = new Color(1f, 1f, 1f, 0f);
-				Alpha += Time.deltaTime;
-				D3Logo.color = new Color(1f, 1f, 1f, Mathf.Clamp(Alpha, 0f, 1f));
-			}
-			else if (Timer < 8f)
-			{
-				Alpha -= Time.deltaTime;
-				D3Logo.color = new Color(1f, 1f, 1f, Mathf.Clamp(Alpha, 0f, 1f));
-			}
-			else if (Timer < 10f)
-			{
-				D3Logo.color = new Color(1f, 1f, 1f, 0f);
-				Alpha += Time.deltaTime;
-				KFFLogo.color = new Color(1f, 1f, 1f, Mathf.Clamp(Alpha, 0f, 1f));
-			}
-			else if (Timer < 12f)
-			{
-				Alpha -= Time.deltaTime;
-				KFFLogo.color = new Color(1f, 1f, 1f, Mathf.Clamp(Alpha, 0f, 1f));
-			}
-			else
-			{
-				IsComplete = true;
-				CleanupAndDestroy();
-			}
+            IsComplete = true;
+            CleanupAndDestroy();
 		}
 	}
 }
