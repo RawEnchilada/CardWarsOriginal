@@ -1,6 +1,6 @@
 # Card Wars
 
-It's the Adventure Time Card Wars Game forked from (ThugRod)[https://github.com/ThugRod/CardWarsOriginal], who modernized the game for newer android devices. Thank you!
+It's the Adventure Time Card Wars Game forked from [ThugRod](https://github.com/ThugRod/CardWarsOriginal), who modernized the game for newer android devices. Thank you!
 
 This version is a slightly modified version based on my preferences:
 
